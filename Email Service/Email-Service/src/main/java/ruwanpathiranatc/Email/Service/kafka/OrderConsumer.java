@@ -1,9 +1,9 @@
-package ruwanpathiranatc.Stock.Service.kafka;
+package ruwanpathiranatc.Email.Service.kafka;
 
-import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
 import ruwanpathiranatc.Base_domains.dto.OrderEvent;
 
 @Service
@@ -16,13 +16,13 @@ public class OrderConsumer {
     )
     public void consume(OrderEvent event) {
         // Logging the received event
-        LOGGER.info("Order event received in Stock Service: {}", event);
+        LOGGER.info("Order event received in Email Service: {}", event);
 
         // Directly print to console for debugging
         System.out.println("************** Order Event Received **************");
         System.out.println("Event Details: " + event);
         System.out.println("**************************************************");
 
-        // Save the order event into the database (Implementation needed)
+        //Send an email to the customer (Implementation needed)
     }
 }
