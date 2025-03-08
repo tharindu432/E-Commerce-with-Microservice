@@ -2,7 +2,7 @@
 
 A scalable, event-driven e-commerce application built with Spring Boot and Apache Kafka.
 
-![Architecture Diagram](architecture-diagram.png)
+![Architecture Diagram](architecture-diagram.svg)
 
 ## Architecture Components
 
@@ -28,7 +28,7 @@ A scalable, event-driven e-commerce application built with Spring Boot and Apach
 ## Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ecommerce-kafka.git
+git clone https://github.com/tharindu432/E-Commerce-with-Microservice.git
 
 # Start infrastructure
 docker-compose up -d
