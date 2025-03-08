@@ -15,21 +15,32 @@ public class OrderProducer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderProducer.class);
     private NewTopic topic;
-    private KafkaTemplate<String, OrderEvent> kafkaTemplate;
+    private final KafkaTemplate<String, OrderEvent> kafkaTemplate;
+
+
 
     public OrderProducer(NewTopic topic, KafkaTemplate<String, OrderEvent> kafkaTemplate) {
-        this.topic = topic;
         this.kafkaTemplate = kafkaTemplate;
+        this.topic = topic;
     }
 
-    public  void sendMessage(OrderEvent event){
-        LOGGER.info(String.format("Order event => %s", event.toString()));
-        //create message
+    public void sendMessage(OrderEvent event) {
+        if (event == null) {
+            LOGGER.warn("Received null OrderEvent. Skipping message send.");
+            return;
+        }
+
+        LOGGER.info("Sending Order event: {}", event);
+
         Message<OrderEvent> message = MessageBuilder
                 .withPayload(event)
-                .setHeader(KafkaHeaders.TOPIC,topic.name())
-                .build();
-        kafkaTemplate.send(message);
+                .setHeader(KafkaHeaders.TOPIC, topic.name())
+.build();
+
+            kafkaTemplate.send(message);
 
     }
+
 }
+
+
