@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Order Service -->
+  <ellipse cx="120" cy="180" rx="80" ry="40" fill="#b71c1c" />
+  <text x="120" y="185" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Order Service</text>
+  
+  <!-- Microservice 1 -->
+  <rect x="60" y="250" width="120" height="60" rx="8" ry="8" fill="#d32f2f" />
+  <text x="120" y="285" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Microservice 1</text>
+  
+  <!-- Arrow from Microservice 1 to Order Service -->
+  <path d="M120 250 L120 220" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Kafka Broker -->
+  <rect x="250" y="120" width="140" height="120" rx="8" ry="8" fill="#f0c14b" />
+  <text x="320" y="145" font-family="Arial" font-size="18" fill="#333" text-anchor="middle" font-weight="bold">Kafka Broker</text>
+  
+  <!-- Topic -->
+  <rect x="270" y="170" width="100" height="40" rx="8" ry="8" fill="#37474f" />
+  <text x="320" y="195" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Topic</text>
+  
+  <!-- Arrow from Order Service to Kafka -->
+  <path d="M200 180 L250 180" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <text x="225" y="170" font-family="Arial" font-size="14" fill="#333">OrderEvent</text>
+  
+  <!-- Stock Service -->
+  <ellipse cx="520" cy="140" rx="70" ry="40" fill="#2e7d32" />
+  <text x="520" y="145" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Stock Service</text>
+  
+  <!-- Consumer Group 1 -->
+  <ellipse cx="680" cy="140" rx="70" ry="30" fill="#388e3c" />
+  <text x="680" y="145" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Consumer Group 1</text>
+  
+  <!-- Email Service -->
+  <ellipse cx="520" cy="240" rx="70" ry="40" fill="#2e7d32" />
+  <text x="520" y="245" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Email Service</text>
+  
+  <!-- Consumer Group 2 -->
+  <ellipse cx="680" cy="240" rx="70" ry="30" fill="#388e3c" />
+  <text x="680" y="245" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Consumer Group 2</text>
+  
+  <!-- Microservice 2 -->
+  <rect x="485" y="60" width="120" height="60" rx="8" ry="8" fill="#d32f2f" />
+  <text x="545" y="95" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Microservice 2</text>
+  
+  <!-- Microservice 3 -->
+  <rect x="485" y="320" width="120" height="60" rx="8" ry="8" fill="#d32f2f" />
+  <text x="545" y="355" font-family="Arial" font-size="16" fill="white" text-anchor="middle">Microservice 3</text>
+  
+  <!-- Arrows from Kafka to Services -->
+  <path d="M390 160 L450 140" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <text x="420" y="130" font-family="Arial" font-size="14" fill="#333">OrderEvent</text>
+  
+  <path d="M390 200 L450 240" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <text x="420" y="230" font-family="Arial" font-size="14" fill="#333">OrderEvent</text>
+  
+  <!-- Arrows from Services to Consumer Groups -->
+  <path d="M590 140 L610 140" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M590 240 L610 240" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Arrows from Microservices to Services -->
+  <path d="M545 120 L545 140" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  <path d="M545 320 L545 280" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Event-Driven E-Commerce Architecture</text>
+  
+  <!-- Definitions for arrowheads -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+</svg>
